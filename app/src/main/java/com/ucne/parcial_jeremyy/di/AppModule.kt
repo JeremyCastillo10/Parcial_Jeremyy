@@ -6,13 +6,14 @@ import com.ucne.parcial_jeremyy.data.VerboApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Module
-@InstallIn
+@InstallIn(SingletonComponent::class)
 object AppModule {
 
     @Singleton
@@ -28,7 +29,7 @@ object AppModule {
     @Provides
     fun providesVerbosApi(moshi: Moshi):VerboApi{
         return Retrofit.Builder()
-            .baseUrl("")
+            .baseUrl("https://polls.apiblueprint.org/verbos")
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
             .create(VerboApi::class.java)
