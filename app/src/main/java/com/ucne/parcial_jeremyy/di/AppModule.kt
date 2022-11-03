@@ -29,7 +29,7 @@ object AppModule {
     @Provides
     fun providesVerbosApi(moshi: Moshi):VerboApi{
         return Retrofit.Builder()
-            .baseUrl("https://polls.apiblueprint.org/verbos")
+            .baseUrl("https://private-a127e-verbos.apiary-mock.com/")
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
             .create(VerboApi::class.java)
