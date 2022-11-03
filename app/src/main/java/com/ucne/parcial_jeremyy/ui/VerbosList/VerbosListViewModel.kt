@@ -29,7 +29,7 @@ class VerbosListViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             _uiState.getAndUpdate {
-                it.copy(verbo = repository.GetLista().sortedBy { it.verbo })
+                it.copy(verbo = repository.GetLista().sortedBy { it.Verbo })
             }
         }
 

@@ -84,13 +84,21 @@ fun VerboRow(verbo: VerboDto) {
             .fillMaxWidth()
             .padding(4.dp)
     ) {
-        Text(text = "Verbo: ${verbo.verbo}",
+        Text(text = "Verbo: ${verbo.Verbo}",
+            style = TextStyle(fontFamily = FontFamily.Default),
+            color = Color.White
+        )
+        Text(text = "Categoria: ${verbo.Categoria}",
+            style = TextStyle(fontFamily = FontFamily.Default),
+            color = Color.White
+        )
+        Text(text = "Nivel: ${verbo.Nivel}",
             style = TextStyle(fontFamily = FontFamily.Default),
             color = Color.White
         )
 
         AsyncImage(
-            model = verbo.Imagen,
+            model = "${verbo.Imagen}",
             contentDescription = null
         )
 
