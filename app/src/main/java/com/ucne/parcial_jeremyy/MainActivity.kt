@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.ucne.parcial_jeremyy.ui.VerbosList.VerbosListScreen
 import com.ucne.parcial_jeremyy.ui.theme.Parcial_JeremyyTheme
-import com.ucne.parcial_jeremyy.util.Screen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
